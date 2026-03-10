@@ -1,5 +1,5 @@
 import app from "./src/app";
-import { pool } from "./src/db";
+import { pool } from "./src/db/db";
 import { env } from "./src/config/env";
 
 async function startServer() {
