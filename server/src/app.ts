@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import authRoutes from "./routes/auth.routes";
 import resumeRoutes from "./routes/resumeRoutes";
+import jobRoutes from "./routes/job.routes";
 
 
 const app = express();
@@ -11,6 +12,7 @@ app.use(express.json());
 
 app.use("/auth", authRoutes);
 app.use("/resumes", resumeRoutes);
+app.use("/jobs", jobRoutes);
 
 app.get("/", (req, res) => {
   res.send("AI Job Copilot API running");
