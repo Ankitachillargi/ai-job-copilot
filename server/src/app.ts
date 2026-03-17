@@ -14,7 +14,7 @@ app.use(express.json());
 app.use("/auth", authRoutes);
 app.use("/resumes", resumeRoutes);
 app.use("/jobs", jobRoutes);
-app.use("/ai", aiRoutes);
+// app.use("/ai", aiRoutes);
 
 app.get("/", (req, res) => {
   res.send("AI Job Copilot API running");

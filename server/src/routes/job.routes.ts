@@ -6,6 +6,7 @@ import {
   getJobById,
   deleteJob
 } from "../controllers/job.controller";
+import { analyzeResume } from "../controllers/ai.controller";
 
 const router = Router();
 
@@ -16,5 +17,6 @@ router.get("/", authenticate, getJobs);
 router.get("/:id", authenticate, getJobById);
 
 router.delete("/:id", authenticate, deleteJob);
+router.post("/:jobId/analyze", authenticate, analyzeResume);
 
 export default router;
