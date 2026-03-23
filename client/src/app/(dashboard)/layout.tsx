@@ -21,11 +21,7 @@ export default function DashboardLayout({
       router.push("/login");
     }
   }, [isHydrated, token, router]);
-
-  // ⏳ Wait until Zustand loads from localStorage
   if (!isHydrated) return null;
-
-  // 🚫 Not logged in → don't render dashboard
   if (!token) return null;
 
   return <div>{children}</div>;
