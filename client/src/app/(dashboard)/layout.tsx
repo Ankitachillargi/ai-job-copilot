@@ -11,16 +11,19 @@ export default function DashboardLayout({
 }) {
   const router = useRouter();
 
-  const { token, isHydrated } = useAuthStore((s) => ({
-    token: s.token,
-    isHydrated: s.isHydrated,
-  }));
+  // ✅ FIX: separate selectors
+  const token = useAuthStore((s) => s.token);
+  const isHydrated = useAuthStore((s) => s.isHydrated);
+
+  console.log("token:", token);
+console.log("isHydrated:", isHydrated);
 
   useEffect(() => {
     if (isHydrated && !token) {
       router.push("/login");
     }
   }, [isHydrated, token, router]);
+
   if (!isHydrated) return null;
   if (!token) return null;
 
