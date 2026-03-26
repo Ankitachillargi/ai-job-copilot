@@ -35,6 +35,7 @@ export const uploadResumeService = async (userId: number, file: any) => {
   return {
     resume_id: result.insertId,
     file_url: filePath,
-    original_filename: file.originalname
+    original_filename: file.originalname,
+    parsed_text: parsedText.slice(0, 300)
   };
 };
