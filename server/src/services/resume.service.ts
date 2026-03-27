@@ -3,7 +3,6 @@ import { pool } from "../db/db";
 
 const pdfParse = require("pdf-parse");
 
-// Clean junk characters from parsed PDF text
 const cleanParsedText = (text: string): string => {
   return text
     .replace(/\|+/g, "")
@@ -26,8 +25,8 @@ export const uploadResumeService = async (userId: number, file: any) => {
     "INSERT INTO resumes (user_id, file_url, original_filename, parsed_text) VALUES (?, ?, ?, ?)",
     [
       userId,
-      filePath.replace(/\\/g, "/"),   // normalized path
-      file.originalname,              // original filename
+      filePath.replace(/\\/g, "/"),   
+      file.originalname,            
       parsedText
     ]
   );
