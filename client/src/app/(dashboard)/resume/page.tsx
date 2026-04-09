@@ -34,9 +34,6 @@ export default function ResumePage() {
       setLoading(false);
     }
   };
-
-  console.log("resume page rendereddddd")
-
   return (
     <div className="p-6 text-white">
       <h1 className="text-xl mb-4">Upload Resume</h1>
