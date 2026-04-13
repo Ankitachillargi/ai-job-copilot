@@ -38,7 +38,7 @@ export const useAuthStore = create<AuthState>((set) => ({
       });
     }
   },
-
+//logout Functionality
   logout: () => {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
