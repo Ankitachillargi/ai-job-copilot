@@ -24,8 +24,6 @@ export default function ResumePage() {
           "Content-Type": "multipart/form-data",
         },
       });
-
-      console.log(res.data);
       alert("Resume uploaded successfully");
     } catch (err: any) {
       console.error(err);
