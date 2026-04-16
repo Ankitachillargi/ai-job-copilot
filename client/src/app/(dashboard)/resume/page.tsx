@@ -24,9 +24,7 @@ export default function ResumePage() {
           "Content-Type": "multipart/form-data",
         },
       });
-
-      console.log(res.data);
-      alert("Resume uploaded successfully");
+      alert("Resume Uploaded Successfully!!");
     } catch (err: any) {
       console.error(err);
       alert("Upload failed");
@@ -34,9 +32,6 @@ export default function ResumePage() {
       setLoading(false);
     }
   };
-
-  console.log("resume page rendereddddd")
-
   return (
     <div className="p-6 text-white">
       <h1 className="text-xl mb-4">Upload Resume</h1>
