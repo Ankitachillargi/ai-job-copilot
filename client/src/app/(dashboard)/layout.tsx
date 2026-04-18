@@ -10,8 +10,6 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   const router = useRouter();
-
-  // ✅ FIX: separate selectors
   const token = useAuthStore((s) => s.token);
   const isHydrated = useAuthStore((s) => s.isHydrated);
 
