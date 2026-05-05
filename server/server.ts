@@ -7,6 +7,8 @@ async function startServer() {
     await pool.query("SELECT 1");
     console.log("Database connected");
 
+    //server steuo Done
+
     app.listen(env.PORT, () => {
       console.log(`Server running on port ${env.PORT}`);
     });
