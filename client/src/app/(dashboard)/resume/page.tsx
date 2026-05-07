@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { api } from "@/lib/api";
 
-//Resume Page Component
+//Resume Page Component..
 export default function ResumePage() {
   const [file, setFile] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
