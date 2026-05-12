@@ -8,6 +8,7 @@ async function startServer() {
     console.log("Database connected");
 
     //server steuo Done with port listen 
+    //server steuo Done with port listen 
 
     app.listen(env.PORT, () => {
       console.log(`Server running on port ${env.PORT}`);
