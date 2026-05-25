@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import { registerService,loginService } from "../services/auth.service";
 
+//Register user Function goes here..
 export const registerUser = async (req: Request, res: Response) => {
   try {
 
