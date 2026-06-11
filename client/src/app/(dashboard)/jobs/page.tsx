@@ -5,6 +5,8 @@ import { api } from "@/lib/api";
 import { useEffect } from "react";
 
 export default function JobsPage() {
+
+  //State Variables
   const [title, setTitle] = useState("");
   const [company, setCompany] = useState("");
   const [description, setDescription] = useState("");
