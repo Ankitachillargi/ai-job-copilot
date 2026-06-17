@@ -9,7 +9,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const loadFromStorage = useAuthStore((s) => s.loadFromStorage);
-
+//UseEffect
   useEffect(() => {
     console.log("🔥 Running loadFromStorage");
     loadFromStorage();
